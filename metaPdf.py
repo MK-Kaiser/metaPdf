@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# Author: Mark Kaiser
+# Date: 01/26/2020
+# Description: takes a pdf file and extracts the metadata
 
 import PyPDF2
 import argparse
@@ -9,7 +12,7 @@ def printMeta(fileName):
     docMinfo = pdfFile.getDocumentInfo()
     print('[*] PDF Metadata For: ' + str(fileName))
     for meta in docMinfo:
-        print('[+] ' + meta + ':' + docMinfo[meta])
+        print('[+] ' + meta + ':', docMinfo[meta])
 
 def main():
     parser = argparse.ArgumentParser(description='Provide a pdf file to extract the metadata')
